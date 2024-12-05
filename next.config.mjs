@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
-// process.env.SERVER_URL ||
 const nextConfig = {
 	env: {
 		APP_ENV: process.env.APP_ENV || 'development',
 		APP_URL: process.env.APP_URL,
 		APP_DOMAIN: process.env.APP_DOMAIN || 'localhost',
-		SERVER_URL: 'http://localhost:5000'
+		SERVER_URL: process.env.SERVER_URL || 'http://localhost:5000'
 	},
 	images: {
 		remotePatterns: [
