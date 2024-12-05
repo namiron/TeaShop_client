@@ -3,8 +3,8 @@ const nextConfig = {
 	env: {
 		APP_ENV: process.env.APP_ENV || 'development',
 		APP_URL: process.env.APP_URL,
-		APP_DOMAIN: process.env.APP_DOMAIN || 'localhost',
-		SERVER_URL: process.env.SERVER_URL || 'http://localhost:5000'
+		APP_DOMAIN: 'localhost' || process.env.APP_DOMAIN,
+		SERVER_URL: 'http://localhost:5000' || process.env.SERVER_URL
 	},
 	images: {
 		remotePatterns: [
