@@ -31,7 +31,7 @@ export function AuthFields({
 					rules={{
 						required: 'Name is required'
 					}}
-					render={({ field }) => (
+					render={({ field }:any) => (
 						<FormItem>
 							<FormControl>
 								<Input
@@ -55,7 +55,7 @@ export function AuthFields({
 						message: 'Please enter a valid email'
 					}
 				}}
-				render={({ field }) => (
+				render={({ field }:any) => (
 					<FormItem>
 						<FormControl>
 							<Input
@@ -79,7 +79,7 @@ export function AuthFields({
 						message: 'Minimum 6 characters'
 					}
 				}}
-				render={({ field }) => (
+				render={({ field }:any) => (
 					<FormItem>
 						<FormControl>
 							<Input
