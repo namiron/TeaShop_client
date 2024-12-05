@@ -1,8 +1,14 @@
 export const getReviewWordWithEnding = (reviewCount: number) => {
-	switch (reviewCount) {
-		case 1 || 21 || 31:
+	switch (true) {
+		case reviewCount === 1 ||
+			(reviewCount % 10 === 1 && reviewCount !== 11):
 			return `${reviewCount} review`
-		case 2 || 3 || 4 || 22 || 23 || 24 || 34:
+		case reviewCount === 2 ||
+			reviewCount === 3 ||
+			reviewCount === 4 ||
+			(reviewCount % 10 >= 2 &&
+				reviewCount % 10 <= 4 &&
+				!(reviewCount % 100 >= 10 && reviewCount % 100 <= 20)):
 			return `${reviewCount} reviews`
 		default:
 			return `${reviewCount} reviews`
